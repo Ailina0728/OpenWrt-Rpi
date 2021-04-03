@@ -65,13 +65,13 @@ git clone --depth=1 https://github.com/apollo-ng/luci-theme-darkmatter
 git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 
 # Add luci-app-advancedsetting
-git clone --depth=1 https://github.com/kenzok8/openwrt-packages/trunk/luci-app-advancedsetting
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-advancedsetting
 
 # Add luci-app-smartinfo
 svn co https://github.com/281677160/openwrt-package/trunk/luci-app-smartinfo
 
 # Add luci-app-dnsfilter
-git clone --depth=1 https://github.com/kenzok8/openwrt-packages/trunk/luci-app-dnsfilter
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-dnsfilter
 
 # Add luci-theme-opentomcat
 svn co https://github.com/281677160/openwrt-package/trunk/luci-theme-opentomcat
