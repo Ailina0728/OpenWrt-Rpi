@@ -95,7 +95,7 @@ git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
 git clone --depth=1 https://github.com/destan19/OpenAppFilter
 
 # Add luci-app-oled (R2S Only)
-git clone --depth=1 https://github.com/NateLol/luci-app-oled
+#git clone --depth=1 https://github.com/NateLol/luci-app-oled
 
 # Add driver for rtl8821cu & rtl8812au-ac
 #svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8812au-ac
@@ -119,10 +119,10 @@ sed -i "s/OpenWrt /M-Tea build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" packag
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
 # Use Lienol's https-dns-proxy package
-pushd feeds/packages/net
+#pushd feeds/packages/net
 rm -rf https-dns-proxy
-svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
-popd
+#svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
+#popd
 
 # Use snapshots' syncthing package
 pushd feeds/packages/utils
