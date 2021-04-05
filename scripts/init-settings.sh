@@ -6,7 +6,8 @@
 # Blog: https://mlapp.cn
 #=================================================
 
-# Set default theme to luci-theme-argon
+# Set default theme to luci-theme-argon   
+uci set luci.main.mediaurlbase='/luci-static/argon'
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Disable autostart by default for some packages
