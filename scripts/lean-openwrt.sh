@@ -120,10 +120,10 @@ sed -i "s/OpenWrt /M-Tea build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" packag
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
 # Use Lienol's https-dns-proxy package
-#pushd feeds/packages/net
+pushd feeds/packages/net
 rm -rf https-dns-proxy
-#svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
-#popd
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
+popd
 
 # Use snapshots' syncthing package
 pushd feeds/packages/utils
