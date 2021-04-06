@@ -125,10 +125,10 @@ rm -rf https-dns-proxy
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
 popd
 
-# Use Lienol's https-dns-proxy package
+# Use Lienol's dnscrypt-proxy package
 pushd feeds/packages/net
-rm -rf https-dns-proxy
-svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
+rm -rf dnscrypt-proxy
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/dnscrypt-proxy2
 popd
 
 # Use snapshots' syncthing package
