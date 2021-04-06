@@ -131,6 +131,11 @@ rm -rf dnscrypt-proxy
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/dnscrypt-proxy2
 popd
 
+# Use Lienol's ariang package
+pushd feeds/packages/net
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/aircrack-ng
+popd
+
 # Use snapshots' syncthing package
 pushd feeds/packages/utils
 rm -rf syncthing
