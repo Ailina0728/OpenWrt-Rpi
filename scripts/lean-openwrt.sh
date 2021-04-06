@@ -133,7 +133,7 @@ popd
 
 # Use Lienol's ariang package
 pushd feeds/packages/net
-svn co https://github.com/Lienol/openwrt-packages/trunk/net/aircrack-ng
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/ariang
 popd
 
 # Use snapshots' syncthing package
