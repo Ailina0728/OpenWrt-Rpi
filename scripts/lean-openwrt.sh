@@ -58,11 +58,15 @@ rm -rf ../lean/luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 
+# Add luci-app-dnscrypt-proxy2
+#rm -rf ../lean/luci-app-dnscrypt-proxy
+svn co https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng/trunk/dnscrypt-proxy2
+
 # Add luci-theme-darkmatter
 git clone --depth=1 https://github.com/apollo-ng/luci-theme-darkmatter
 
 # Add luci-theme-atmaterial
-git clone --depth=1 https://github.com/281677160/openwrt-package/trunk/luci-theme-atmaterial
+svn co https://github.com/281677160/openwrt-package/trunk/luci-theme-atmaterial
 
 # Add luci-theme-infinityfreedom
 git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
