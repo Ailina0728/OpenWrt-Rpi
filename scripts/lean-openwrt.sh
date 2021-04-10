@@ -61,6 +61,9 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 # Add luci-theme-darkmatter
 git clone --depth=1 https://github.com/apollo-ng/luci-theme-darkmatter
 
+# Add luci-theme-atmaterial
+git clone --depth=1 https://github.com/281677160/openwrt-package/trunk/luci-theme-atmaterial
+
 # Add luci-theme-infinityfreedom
 git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 
@@ -108,6 +111,16 @@ sed -i '/http/d' zzz-default-settings
 export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
 sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" zzz-default-settings
 popd
+
+
+# 修改主机名字，把OpenWrt-123修改你喜欢的就行（不能纯数字或者使用中文）
+sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-X'' package/lean/default-settings/files/zzz-default-settings
+
+# 版本号里显示一个自己的名字（xxxxxxx build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
+sed -i "s/OpenWrt /M-Tea build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
+
+# 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
+sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
 # Use Lienol's https-dns-proxy package
 pushd feeds/packages/net
