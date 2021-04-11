@@ -63,7 +63,7 @@ git clone --depth=1 https://github.com/apollo-ng/luci-theme-darkmatter
 
 # Add luci-app-dnscrypt-proxy2
 #rm -rf ../lean/luci-app-dnscrypt-proxy
-svn co https://github.com/peter-tank/luci-app-dnscrypt-proxy2
+git clone --depth=1 https://github.com/peter-tank/luci-app-dnscrypt-proxy2
 
 # Add luci-theme-darkmatter
 git clone --depth=1 https://github.com/apollo-ng/luci-theme-darkmatter
