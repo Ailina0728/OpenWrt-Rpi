@@ -116,7 +116,6 @@ export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk
 sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" zzz-default-settings
 popd
 
-
 # 修改主机名字，把OpenWrt-123修改你喜欢的就行（不能纯数字或者使用中文）
 sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-X'' package/lean/default-settings/files/zzz-default-settings
 
