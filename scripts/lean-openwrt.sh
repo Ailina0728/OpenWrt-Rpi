@@ -123,10 +123,10 @@ sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-X'' pac
 sed -i "s/OpenWrt /M-Tea build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 # Use Lienol's https-dns-proxy package
-pushd feeds/packages/net
-rm -rf https_dns_proxy
-svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
-popd
+#pushd feeds/packages/net
+#rm -rf https_dns_proxy
+#svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
+#popd
 
 # Use snapshots' syncthing package
 pushd feeds/packages/utils
