@@ -18,8 +18,8 @@ cp -r temp/packages/lang/node-yarn packages/lang/node-yarn
 cp -r temp/packages/devel/packr packages/devel/packr
 
 # Add luci-app-gowebdav
-cp -r temp/luci/applications/luci-app-gowebdav luci/applications/luci-app-gowebdav
-cp -r temp/packages/net/gowebdav packages/net/gowebdav
+#cp -r temp/luci/applications/luci-app-gowebdav luci/applications/luci-app-gowebdav
+#cp -r temp/packages/net/gowebdav packages/net/gowebdav
 
 # Add netdata
 rm -rf packages/admin/netdata
@@ -39,8 +39,8 @@ cp -r temp/packages/libs/msgpack-c packages/libs/msgpack-c
 cp -r temp/packages/admin/gotop packages/admin/gotop
 
 # Add minieap
-cp -r temp/packages/net/minieap packages/net/minieap
-rm -rf temp
+#cp -r temp/packages/net/minieap packages/net/minieap
+#rm -rf temp
 popd
 
 # Set to local feeds
