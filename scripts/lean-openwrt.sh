@@ -9,9 +9,9 @@
 sed -i 's/192.168.1.1/192.168.3.33/g' package/base-files/files/bin/config_generate
 
 # Add luci-app-ssr-plus
-pushd package/lean
-git clone --depth=1 https://github.com/fw876/helloworld
-popd
+#pushd package/lean
+#git clone --depth=1 https://github.com/fw876/helloworld
+#popd
 
 # Clone community packages to package/community
 mkdir package/community
@@ -20,7 +20,7 @@ pushd package/community
 # Add Lienol's Packages
 git clone --depth=1 https://github.com/Lienol/openwrt-package
 git clone --depth=1 https://github.com/kenzok8/small-package
-src-git small https://github.com/kenzok8/small
+git clone --depth=1 https://github.com/kenzok8/small
 
 # Add luci-app-passwall
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
