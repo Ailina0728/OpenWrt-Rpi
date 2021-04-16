@@ -19,26 +19,28 @@ pushd package/community
 
 # Add Lienol's Packages
 git clone --depth=1 https://github.com/Lienol/openwrt-package
+git clone --depth=1 https://github.com/kenzok8/small-package
+src-git small https://github.com/kenzok8/small
 
 # Add luci-app-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
+#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
 # Add luci-app-vssr <M>
-git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
-git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
+#git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
+#git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 
 # Add mentohust & luci-app-mentohust
-git clone --depth=1 https://github.com/BoringCat/luci-app-mentohust
-git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk
+#git clone --depth=1 https://github.com/BoringCat/luci-app-mentohust
+#git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk
 
 # Add luci-proto-minieap
-git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
+#git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
 # Add ServerChan
-git clone --depth=1 https://github.com/tty228/luci-app-serverchan
+#git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add OpenClash
-git clone --depth=1 -b master https://github.com/vernesong/OpenClash
+#git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
 # Add luci-app-onliner
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
@@ -54,9 +56,9 @@ git clone --depth=1 https://github.com/KFERMercer/luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 
 # Add luci-theme-argon
-rm -rf ../lean/luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+#rm -rf ../lean/luci-theme-argon
+#git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+#git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 
 # Add luci-theme-darkmatter
 git clone --depth=1 https://github.com/apollo-ng/luci-theme-darkmatter
@@ -65,35 +67,32 @@ git clone --depth=1 https://github.com/apollo-ng/luci-theme-darkmatter
 #rm -rf ../lean/luci-app-dnscrypt-proxy
 #git clone --depth=1 https://github.com/peter-tank/luci-app-dnscrypt-proxy2
 
-# Add luci-theme-darkmatter
-src-git darkmatter git://github.com/apollo-ng/luci-theme-darkmatter.git
-
 # Add luci-theme-atmaterial
-svn co https://github.com/281677160/openwrt-package/trunk/luci-theme-atmaterial
+#svn co https://github.com/281677160/openwrt-package/trunk/luci-theme-atmaterial
 
 # Add luci-theme-infinityfreedom
-git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
+#git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 
 # Add luci-app-advancedsetting
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-advancedsetting
+#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-advancedsetting
 
 # Add luci-app-smartinfo
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-smartinfo
+#svn co https://github.com/281677160/openwrt-package/trunk/luci-app-smartinfo
 
 # Add luci-app-dnsfilter
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-dnsfilter
+#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-dnsfilter
 
 # Add luci-theme-opentomcat
-svn co https://github.com/281677160/openwrt-package/trunk/luci-theme-opentomcat
+#svn co https://github.com/281677160/openwrt-package/trunk/luci-theme-opentomcat
 
 # Add luci-theme-opentopd
-svn co https://github.com/281677160/openwrt-package/trunk/luci-theme-opentopd
+#svn co https://github.com/281677160/openwrt-package/trunk/luci-theme-opentopd
 
 # Add luci-theme-rosy
-svn co https://github.com/281677160/openwrt-package/trunk/luci-theme-rosy
+git clone --depth=1 https://github.com/rosywrt/luci-theme-rosy
 
 # Add luci-app-ttnode
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-ttnode
+git clone --depth=1 https://github.com/jerrykuku/luci-app-ttnode
 
 # Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
@@ -120,16 +119,16 @@ sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" zzz-default-s
 popd
 
 # 修改主机名字，把OpenWrt-123修改你喜欢的就行（不能纯数字或者使用中文）
-sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-X'' package/lean/default-settings/files/zzz-default-settings
+#sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-X'' package/lean/default-settings/files/zzz-default-settings
 
 # 版本号里显示一个自己的名字（xxxxxxx build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
-sed -i "s/OpenWrt /M-Tea build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
+#sed -i "s/OpenWrt /M-Tea build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 # Use Lienol's https-dns-proxy package
-#pushd feeds/packages/net
-#rm -rf https_dns_proxy
-#svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
-#popd
+pushd feeds/packages/net
+rm -rf https_dns_proxy
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
+popd
 
 # Use snapshots' syncthing package
 pushd feeds/packages/utils
