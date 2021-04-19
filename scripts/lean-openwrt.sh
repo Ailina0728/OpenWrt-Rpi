@@ -89,7 +89,7 @@ git clone --depth=1 https://github.com/apollo-ng/luci-theme-darkmatter
 #svn co https://github.com/281677160/openwrt-package/trunk/luci-theme-opentopd
 
 # Add luci-theme-rosy
-git clone --depth=1 https://github.com/rosywrt/luci-theme-rosy
+#git clone --depth=1 https://github.com/rosywrt/luci-theme-rosy
 
 # Add luci-app-ttnode
 git clone --depth=1 https://github.com/jerrykuku/luci-app-ttnode
@@ -102,14 +102,7 @@ git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
 
 # Add OpenAppFilter
 git clone --depth=1 https://github.com/destan19/OpenAppFilter
-
-# Add luci-app-oled (R2S Only)
-#git clone --depth=1 https://github.com/NateLol/luci-app-oled
-
-# Add driver for rtl8821cu & rtl8812au-ac
-#svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8812au-ac
-#svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8821cu
-#popd
+popd
 
 # Mod zzz-default-settings
 pushd package/lean/default-settings/files
